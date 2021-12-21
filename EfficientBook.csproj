@@ -111,6 +111,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataBaseConnections.cs" />
+    <Compile Include="Klient.cs" />
     <Compile Include="Log_in.xaml.cs">
       <DependentUpon>Log_in.xaml</DependentUpon>
     </Compile>
@@ -126,6 +127,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page_klienci.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Page1.xaml.cs">
@@ -133,6 +138,9 @@
     </Compile>
     <Compile Include="Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_klienci.xaml.cs">
+      <DependentUpon>Page_klienci.xaml</DependentUpon>
     </Compile>
     <Compile Include="Produkt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

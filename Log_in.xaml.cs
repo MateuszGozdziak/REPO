@@ -40,7 +40,11 @@ namespace EfficientBook
                 }
 
             }
+            MainWindow signIn = new MainWindow();
+            signIn.Show();
             Console.WriteLine("ok");
+            this.Close();
+
         }
     }
 }

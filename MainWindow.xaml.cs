@@ -28,6 +28,7 @@ namespace EfficientBook
     {
         Page1 page1 = new Page1();
         Page2 page2 = new Page2();
+        Page_klienci page_klienci = new Page_klienci();
 
 
         public MainWindow()
@@ -47,7 +48,7 @@ namespace EfficientBook
         }
         private void Button_Klienci(object sender, RoutedEventArgs e)
         {
-            Main.NavigationService.Navigate(page2);
+            Main.NavigationService.Navigate(page_klienci);
         }
 
     }
