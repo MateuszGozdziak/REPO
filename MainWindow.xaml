@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EfficientBook"
         mc:Ignorable="d"
-        Title="EfficientBook" Height="450" Width="800">
+        Title="EfficientBook" Height="470" Width="800">
 
     <Grid HorizontalAlignment="Center" Width="800" Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
@@ -41,10 +41,11 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
             
-        </Rectangle>-->
+        </Rectangle>
 
 
-        <Frame x:Name="Main" Grid.ColumnSpan="2"/>
+        <Frame x:Name="Main" Grid.ColumnSpan="2"/>-->
+        <Frame x:Name="Main" Grid.Column="1" Content="" HorizontalAlignment="Center" Height="434" VerticalAlignment="Center" Width="640"/>
 
         <!--
         

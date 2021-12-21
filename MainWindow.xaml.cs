@@ -52,5 +52,9 @@ namespace EfficientBook
             //NavigationService.Navigate(null);
         }
 
+        private void Button_Pracownicy(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
