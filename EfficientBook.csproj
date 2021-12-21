@@ -131,6 +131,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page_Klienci_Dodaj.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Page1.xaml.cs">
@@ -141,6 +145,9 @@
     </Compile>
     <Compile Include="Page_klienci.xaml.cs">
       <DependentUpon>Page_klienci.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Klienci_Dodaj.xaml.cs">
+      <DependentUpon>Page_Klienci_Dodaj.xaml</DependentUpon>
     </Compile>
     <Compile Include="Produkt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
