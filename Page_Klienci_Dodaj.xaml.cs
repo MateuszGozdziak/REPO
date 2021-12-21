@@ -27,7 +27,24 @@ namespace EfficientBook
 
         private void Button_Page_Klienci_dodaj_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                DataBaseConnections DataCon = new DataBaseConnections();
+                DataCon.OpenConnection();
+                string sql = $"INSERT INTO `klienci`(`Nazwa_Firmy`, `Imie`, `Nazwisko`, `NIP`, `Numer_telefonu`, `Email`, `Adres`) VALUES('{firma.Text}', '{imie.Text}', '{nazwisko.Text}', {nip.Text}, {telefon.Text}, '{email.Text}', '{adres.Text}')";
+                DataCon.Write(sql);
+                DataCon.CloseConnection();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            NavigationService.Navigate(null);
+            this.NavigationService.GoBack();
+            //this.NavigationService.
             
+
         }
     }
 }
