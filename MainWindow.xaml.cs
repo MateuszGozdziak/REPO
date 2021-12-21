@@ -34,7 +34,6 @@ namespace EfficientBook
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -45,10 +44,12 @@ namespace EfficientBook
         private void Button_Produkty(object sender, RoutedEventArgs e)
         {
             Main.Navigate(page1);
+            //NavigationService.RemoveBackEntry()
         }
         private void Button_Klienci(object sender, RoutedEventArgs e)
         {
             Main.NavigationService.Navigate(page_klienci);
+            //NavigationService.Navigate(null);
         }
 
     }

@@ -87,7 +87,9 @@ namespace EfficientBook
 
         private void Button_dodaj_Click(object sender, RoutedEventArgs e)
         {
-
+            Page_Klienci_Dodaj page_Klienci_Dodaj = new Page_Klienci_Dodaj();
+            NavigationService.Navigate(page_Klienci_Dodaj);
+            //NavigationService.Navigate(null);
         }
         
         private void Button_delete_Click(object sender, RoutedEventArgs e)
