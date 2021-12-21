@@ -30,7 +30,7 @@ namespace EfficientBook
         {
             Main.NavigationService.Navigate(page2);
         }
-        //
+        ////
 
     }
 }
