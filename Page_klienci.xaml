@@ -9,28 +9,28 @@
       Title="Page_klienci">
 
     <Grid Background="#FFE0D9FF">
-        <DataGrid Name="DataGrid_Page_klienci" Margin="98,63,98,63">
+        <DataGrid Name="DataGrid_Page_klienci" Margin="98,63,98,63" ItemsSource="{Binding Klient}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Usuń">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button  Click="Button_delete_Click" Command="Delete">Delete</Button>
+                            <Button  Click="Button_delete_Click" >Delete</Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="Edytuj"/>
-                <DataGridTextColumn Header="Nr"/>
-                <DataGridTextColumn Header="Imię"/>
-                <DataGridTextColumn Header="Nazwisko"/>
-                <DataGridTextColumn Header="Email"/>
-                <DataGridTextColumn HeaderStringFormat="" Header="Telefon">
+                <DataGridTextColumn Binding="{Binding ID_Klienta}" Header="Nr"/>
+                <DataGridTextColumn Binding="{Binding Imie}" Header="Imię"/>
+                <DataGridTextColumn Binding="{Binding Nazwisko}" Header="Nazwisko"/>
+                <DataGridTextColumn Binding="{Binding Email}" Header="Email"/>
+                <DataGridTextColumn Binding="{Binding Numer_Telefonu}" HeaderStringFormat="" Header="Telefon">
                     <DataGridTextColumn.CellStyle>
                         <Style/>
                     </DataGridTextColumn.CellStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Adres zamieszkania"/>
-                <DataGridTextColumn Header="NIP"/>
-                <DataGridTextColumn Header="Firma"/>
+                <DataGridTextColumn Binding="{Binding Numer_Telefonu}" Header="Adres zamieszkania"/>
+                <DataGridTextColumn Binding="{Binding NIP}" Header="NIP"/>
+                <DataGridTextColumn Binding="{Binding Nazwa_Firmy}" Header="Firma"/>
             </DataGrid.Columns>
             <DataGrid.AlternatingRowBackground>
                 <SolidColorBrush Color="#FF7D72FC" Opacity="0.25"/>

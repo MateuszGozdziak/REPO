@@ -22,19 +22,21 @@ namespace EfficientBook
     /// </summary>
     public partial class Page_klienci : Page
     {
+
+        List<Klient> list_of_customer = new List<Klient>();
+
         public Page_klienci()
         {
             InitializeComponent();
 
             DataBaseConnections DataCon = new DataBaseConnections();
             DataCon.OpenConnection();
+            
 
             try
             {
                 string sql = "SELECT * FROM klienci";
                 MySqlDataReader reader = DataCon.Read(sql);
-
-                List<Klient> list_of_customer = new List<Klient>();
 
                 if (reader.HasRows)
                 {
@@ -49,7 +51,6 @@ namespace EfficientBook
                         klient.Numer_Telefonu=(int)reader[5];
                         klient.Email = reader[6].ToString();
                         klient.Adres=reader[7].ToString();
-
 
                         list_of_customer.Add(klient);
                     }
@@ -91,8 +92,22 @@ namespace EfficientBook
         
         private void Button_delete_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView row = (DataRowView)DataGrid_Page_klienci.SelectedItem;
-            //dt.Rows.Remove(row.Row);
+            Klient abc = new Klient();
+            try
+            {
+                abc = (Klient)DataGrid_Page_klienci.SelectedItem;
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("dziala");
+                return;
+            }
+            
+            int row=list_of_customer.IndexOf(abc);
+            list_of_customer.Remove(abc);////usuwa z listy--------------------------
+            DataGrid_Page_klienci.ItemsSource = list_of_customer;
+            DataGrid_Page_klienci.Items.Refresh();
         }
     }
 }

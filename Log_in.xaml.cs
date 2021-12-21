@@ -23,6 +23,7 @@ namespace EfficientBook
         public Log_in()
         {
             InitializeComponent();
+            
         }
 
         private void Sign_in_Click(object sender, RoutedEventArgs e)
