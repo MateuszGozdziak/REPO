@@ -8,27 +8,30 @@
         Title="EfficientBook" Height="450" Width="800">
 
     <Grid HorizontalAlignment="Center" Width="800" Margin="0,0,0,0">
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FF2C86FF" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-
-
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition />
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="641*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
+        <Grid.Background>
+            <SolidColorBrush Color="#FFBAE6FF" Opacity="0.3"/>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFCDCAF2" Opacity="0.6"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="383" VerticalAlignment="Top" Width="160" Margin="0,51,0,-15" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFCDCAF2" Opacity="0.6"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Ellipse HorizontalAlignment="Left" Height="328" Margin="431,-83,-118,0" VerticalAlignment="Top" Width="328" Grid.Column="1">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="#FFBAE6FF" Opacity="0.3"/>
+            </Ellipse.Fill>
+        </Ellipse>
+
+
 
         <!--<Rectangle Grid.Column="1" Grid.RowSpan="7" Name="Work_Space">
             <Rectangle.Fill>
@@ -41,7 +44,7 @@
         </Rectangle>-->
 
 
-        <Frame x:Name="Main" Grid.Column="1" Grid.RowSpan="7"/>
+        <Frame x:Name="Main" Grid.ColumnSpan="2"/>
 
         <!--
         
@@ -58,17 +61,32 @@
             <ListBoxItem>Mary</ListBoxItem>
         </ListBox>
         -->
+        <Ellipse HorizontalAlignment="Left" Height="36" Margin="8,4,0,0" VerticalAlignment="Top" Width="36" Fill="#FF4BA9FF"/>
+        <TextBlock HorizontalAlignment="Left" Height="36" Margin="16,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" FontSize="28" FontWeight="Bold" Text="A"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="51,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" FontSize="15"><Run Text="Hello, "/><Run FontWeight="Bold" Text="Admin"/></TextBlock>
+
 
         <!-- View report button -->
-        <Button Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" Width="125" Height="25" HorizontalAlignment="Right" Click="Button_Click">Tworzenie zadań</Button>
-        <Button Grid.Column="0" Grid.Row="1" Margin="0,0,0,0" Width="125" Height="25" HorizontalAlignment="Right" Click="Button_Click">Tworzenie zamówień</Button>
-        <Button Grid.Column="0" Grid.Row="2" Margin="0,0,0,0" Width="125" Height="25" HorizontalAlignment="Right" Click="Button_Klienci">Klienci</Button>
+        <Button  Margin="43,92,0,0" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click">Tworzenie zadań</Button>
+        <Button  Margin="43,129,0,0" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click">Tworzenie zamówień</Button>
+        <Button  Margin="43,166,0,0" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Klienci" Grid.ColumnSpan="2">Klienci</Button>
         <!--here -->
-        <Button Grid.Column="0" Grid.Row="3" Margin="0,0,0,0" Width="125" Height="25" HorizontalAlignment="Right" Click="Button_Produkty">Produkty</Button>
+        <Button  Margin="43,203,0,0" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Produkty" Grid.ColumnSpan="2">Produkty</Button>
         <!--here -->
-        <Button Grid.Column="0" Grid.Row="4" Margin="0,0,0,0" Width="125" Height="25" HorizontalAlignment="Right" Click="Button_Click">Sprzedane produkty</Button>
-        <Button Grid.Column="0" Grid.Row="5" Margin="0,0,0,0" Width="125" Height="25" HorizontalAlignment="Right" Click="Button_Click">Historia zamówień</Button>
-        <Button Grid.Column="0" Grid.Row="6" Margin="0,0,0,0" Width="125" Height="25" HorizontalAlignment="Right" Click="Button_Click">Pracownicy</Button>
+        <Button  Margin="43,235,0,0" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click" Grid.ColumnSpan="2">Sprzedane produkty</Button>
+        <Button  Margin="43,267,0,0" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click" Grid.ColumnSpan="2">Historia zamówień</Button>
+        <Button  Margin="43,299,0,0" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click" Grid.ColumnSpan="2">Pracownicy</Button>
+        <Button  Margin="43,392,0,0" BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click" Grid.ColumnSpan="2" Content="Wyloguj się"/>
+
+        <Image HorizontalAlignment="Left" Height="18" Margin="18,92,0,0" VerticalAlignment="Top" Width="18" Source="/to-do-list.png"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="18,129,0,0" VerticalAlignment="Top" Width="18" Source="/order.png"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="18,166,0,0" VerticalAlignment="Top" Width="18" Source="/user.png" OpacityMask="#FFE82424"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="18,203,0,0" VerticalAlignment="Top" Width="18" Source="/list.png"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="18,234,0,0" VerticalAlignment="Top" Width="18" Source="/trolley.png"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="18,267,0,0" VerticalAlignment="Top" Width="18" Source="/fast-delivery.png"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="18,298,0,0" VerticalAlignment="Top" Width="18" Source="/Pracownik.png"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="18,392,0,0" VerticalAlignment="Top" Width="18" Source="/exit.png" OpacityMask="#FF535353"/>
+
     </Grid>
 
 
