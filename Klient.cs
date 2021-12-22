@@ -16,5 +16,6 @@ namespace EfficientBook
         public int Numer_Telefonu { get; set;}
         public string Email { get; set; }
         public string Adres { get; set; }
+        //
     }
 }
